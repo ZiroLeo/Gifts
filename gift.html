@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>LUMO · Trade Analytics</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -32,6 +33,326 @@
             border-radius: 4px;
         }
 
+        /* ===== PERSIAN LANGUAGE SUPPORT ===== */
+        body.fa {
+            font-family: 'Rubik', 'Inter', -apple-system, sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+
+        body.fa .nav-item .label,
+        body.fa .page-title,
+        body.fa .stat-box .label,
+        body.fa .stat-box .value,
+        body.fa .stat-box .sub,
+        body.fa .filter-chip,
+        body.fa .btn-yellow,
+        body.fa .btn-submit,
+        body.fa .modal-box h3,
+        body.fa .modal-box label,
+        body.fa .settings-item .left .title,
+        body.fa .settings-item .left .desc,
+        body.fa .waiting-item .info .name,
+        body.fa .waiting-item .info .days,
+        body.fa .waiting-item .actions button,
+        body.fa .chat-msg,
+        body.fa .chat-input-row input,
+        body.fa .chat-input-row button,
+        body.fa .insight-item,
+        body.fa .code-block,
+        body.fa .gift-item label,
+        body.fa .gift-item-radio label,
+        body.fa .gift-search,
+        body.fa .filter-label,
+        body.fa .section-title,
+        body.fa .stat-title,
+        body.fa .card-title,
+        body.fa .trade-item .left .name,
+        body.fa .trade-item .left .date,
+        body.fa .trade-item .right .percent,
+        body.fa .trade-item .right .amount {
+            font-family: 'Rubik', 'Inter', -apple-system, sans-serif;
+        }
+
+        /* Only headers go RTL */
+        body.fa .page-title,
+        body.fa .section-title,
+        body.fa .stat-title,
+        body.fa .card-title,
+        body.fa .filter-label,
+        body.fa .modal-box h3,
+        body.fa .settings-item .left .title,
+        body.fa .settings-item .left .desc,
+        body.fa .stat-box .label,
+        body.fa .ai-title,
+        body.fa .nav-item .label,
+        body.fa .filter-chip,
+        body.fa .btn-yellow,
+        body.fa .btn-submit,
+        body.fa .modal-box label,
+        body.fa .chat-msg,
+        body.fa .insight-item,
+        body.fa .waiting-item .info .name,
+        body.fa .waiting-item .info .days {
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* Data content stays LTR */
+        body.fa .trade-item .left .name,
+        body.fa .trade-item .left .date,
+        body.fa .trade-item .right .percent,
+        body.fa .trade-item .right .amount,
+        body.fa .waiting-item .info .name,
+        body.fa .waiting-item .info .days,
+        body.fa .gift-item label,
+        body.fa .gift-item-radio label,
+        body.fa .gift-search,
+        body.fa .form-group input,
+        body.fa .form-group select,
+        body.fa .code-block,
+        body.fa #trades-list,
+        body.fa #waiting-list,
+        body.fa #overview-list,
+        body.fa .stat-box .value,
+        body.fa .stat-box .sub {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+
+        /* Trade items stay LTR */
+        body.fa .trade-item {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+
+        body.fa .trade-item .left {
+            align-items: flex-start !important;
+        }
+
+        body.fa .trade-item .right {
+            text-align: right !important;
+        }
+
+        /* Stats stay LTR */
+        body.fa .stat-box {
+            direction: ltr !important;
+            text-align: center !important;
+        }
+
+        body.fa .stat-row {
+            direction: ltr !important;
+        }
+
+        /* Filter section - headers RTL, data LTR */
+        body.fa #filter-section {
+            direction: rtl;
+        }
+
+        body.fa #filter-section .filter-chip {
+            direction: rtl;
+        }
+
+        body.fa #filter-gifts .flex-between,
+        body.fa #filter-gifts .flex {
+            direction: rtl;
+        }
+
+        body.fa #selected-gifts-label {
+            direction: ltr !important;
+        }
+
+        /* Settings - headers RTL, buttons LTR */
+        body.fa .settings-item {
+            direction: rtl;
+        }
+
+        body.fa .settings-item .left {
+            text-align: right;
+        }
+
+        body.fa .settings-item .btn-yellow {
+            direction: ltr;
+        }
+
+        /* Modals - headers RTL, content LTR */
+        body.fa .modal-box {
+            direction: rtl;
+        }
+
+        body.fa .modal-box h3 {
+            text-align: right;
+        }
+
+        body.fa .modal-box label {
+            text-align: right;
+        }
+
+        body.fa .modal-box input,
+        body.fa .modal-box select,
+        body.fa .modal-box textarea {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+
+        body.fa .modal-close {
+            float: left;
+        }
+
+        /* AI Chat - headers RTL, messages LTR */
+        body.fa .ai-header {
+            direction: rtl;
+        }
+
+        body.fa .ai-back-btn svg {
+            transform: rotate(180deg);
+        }
+
+        body.fa .chat-msg.bot {
+            align-self: flex-start;
+        }
+
+        body.fa .chat-msg.user {
+            align-self: flex-end;
+        }
+
+        body.fa .chat-messages {
+            direction: ltr !important;
+        }
+
+        body.fa .chat-input-wrapper {
+            direction: ltr !important;
+        }
+
+        body.fa .chat-input-row {
+            direction: ltr !important;
+        }
+
+        /* Waiting items - headers RTL, data LTR */
+        body.fa .waiting-item {
+            direction: rtl;
+        }
+
+        body.fa .waiting-item .info {
+            align-items: flex-end;
+        }
+
+        body.fa .waiting-item .info .name {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+
+        body.fa .waiting-item .info .days {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+
+        body.fa .waiting-item .actions {
+            direction: ltr !important;
+            justify-content: flex-end;
+        }
+
+        /* Gift selector - headers RTL, data LTR */
+        body.fa .gift-item {
+            direction: ltr !important;
+        }
+
+        body.fa .gift-item-radio {
+            direction: ltr !important;
+        }
+
+        body.fa .gift-item input[type="checkbox"],
+        body.fa .gift-item input[type="radio"] {
+            margin-left: 6px;
+            margin-right: 0;
+        }
+
+        /* Chart stays LTR */
+        body.fa .chart-container {
+            direction: ltr !important;
+        }
+
+        body.fa #chart-start-label,
+        body.fa #chart-end-label {
+            direction: ltr !important;
+        }
+
+        /* Overview list - data LTR */
+        body.fa #overview-list {
+            direction: ltr !important;
+        }
+
+        body.fa #overview-list .overview-row {
+            direction: ltr !important;
+        }
+
+        /* Risk alert - data LTR */
+        body.fa #risk-alert-content {
+            direction: ltr !important;
+        }
+
+        /* AI Insights - data LTR */
+        body.fa .insight-item {
+            direction: ltr !important;
+        }
+
+        body.fa .insight-item .icon {
+            margin-right: 8px;
+            margin-left: 0;
+        }
+
+        /* Language toggle - moved to settings */
+        .lang-toggle {
+            display: none !important;
+        }
+
+        /* Language setting in settings */
+        .lang-setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        body.fa .lang-setting-item {
+            direction: rtl;
+        }
+        .lang-setting-item:last-child {
+            border-bottom: none;
+        }
+        .lang-setting-item .left .title {
+            font-weight: 500;
+            font-size: 13px;
+        }
+        body.fa .lang-setting-item .left {
+            text-align: right;
+        }
+        .lang-setting-item .left .desc {
+            font-size: 11px;
+            color: #555;
+            margin-top: 2px;
+        }
+        .lang-toggle-inline {
+            background: rgba(250, 204, 21, 0.1);
+            color: #facc15;
+            border: 1px solid rgba(250, 204, 21, 0.15);
+            padding: 6px 16px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.25s ease;
+        }
+        body.fa .lang-toggle-inline {
+            font-family: 'Rubik', sans-serif;
+        }
+        .lang-toggle-inline:hover {
+            background: rgba(250, 204, 21, 0.18);
+            border-color: rgba(250, 204, 21, 0.3);
+        }
+
+        /* ===== BASE APP ===== */
         #app {
             display: flex;
             flex-direction: column;
@@ -105,6 +426,9 @@
             min-width: 0;
             position: relative;
         }
+        body.fa .nav-item {
+            font-family: 'Rubik', sans-serif;
+        }
         .nav-item svg {
             width: 20px;
             height: 20px;
@@ -132,27 +456,6 @@
         .nav-item:hover svg {
             stroke: #facc15;
         }
-        .nav-item .nav-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3px;
-        }
-        .nav-item .nav-row svg {
-            width: 16px;
-            height: 16px;
-        }
-        .nav-item .badge-dot {
-            position: absolute;
-            top: 4px;
-            right: 50%;
-            transform: translateX(16px);
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #facc15;
-            box-shadow: 0 0 12px rgba(250, 204, 21, 0.4);
-        }
 
         /* ===== AI PAGE HEADER ===== */
         .ai-header {
@@ -169,6 +472,9 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             margin: -16px -16px 12px -16px;
             padding: 12px 16px;
+        }
+        body.fa .ai-header {
+            direction: rtl;
         }
         .ai-back-btn {
             background: none;
@@ -188,6 +494,9 @@
             width: 28px;
             height: 28px;
             stroke: #facc15;
+        }
+        body.fa .ai-back-btn svg {
+            transform: rotate(180deg);
         }
         .ai-title {
             font-size: 20px;
@@ -222,10 +531,6 @@
             background: rgba(59, 130, 246, 0.06);
             border-color: rgba(59, 130, 246, 0.12);
         }
-        .glass-gold {
-            background: rgba(250, 204, 21, 0.04);
-            border-color: rgba(250, 204, 21, 0.08);
-        }
 
         /* ===== BUTTONS ===== */
         .btn-yellow {
@@ -242,6 +547,9 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+        }
+        body.fa .btn-yellow {
+            font-family: 'Rubik', sans-serif;
         }
         .btn-yellow:hover {
             background: rgba(250, 204, 21, 0.18);
@@ -265,6 +573,9 @@
             font-family: 'Inter', sans-serif;
             transition: all 0.25s ease;
             width: 100%;
+        }
+        body.fa .btn-submit {
+            font-family: 'Rubik', sans-serif;
         }
         .btn-submit:hover {
             transform: scale(1.02);
@@ -304,11 +615,17 @@
             overflow-y: auto;
             animation: slideUp 0.3s ease;
         }
+        body.fa .modal-box {
+            direction: rtl;
+        }
         .modal-box h3 {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 16px;
             color: #facc15;
+        }
+        body.fa .modal-box h3 {
+            text-align: right;
         }
         .modal-close {
             float: right;
@@ -319,6 +636,9 @@
             font-size: 24px;
             padding: 0 4px;
             transition: all 0.2s ease;
+        }
+        body.fa .modal-close {
+            float: left;
         }
         .modal-close:hover {
             color: #fff;
@@ -347,6 +667,9 @@
         .form-group {
             margin-bottom: 14px;
         }
+        body.fa .form-group label {
+            text-align: right;
+        }
         .form-group label {
             display: block;
             font-size: 11px;
@@ -368,6 +691,10 @@
             font-family: 'Inter', sans-serif;
             transition: all 0.25s ease;
             outline: none;
+        }
+        body.fa .form-group input,
+        body.fa .form-group select {
+            font-family: 'Rubik', sans-serif;
         }
         .form-group input:focus,
         .form-group select:focus {
@@ -391,6 +718,9 @@
             overflow-y: auto;
             padding: 4px 0;
         }
+        body.fa .gift-grid {
+            direction: rtl;
+        }
         .gift-item {
             display: flex;
             align-items: center;
@@ -403,6 +733,14 @@
             font-size: 11px;
             color: #999;
             border: 1px solid transparent;
+        }
+        body.fa .gift-item {
+            direction: ltr !important;
+        }
+        body.fa .gift-item input[type="checkbox"],
+        body.fa .gift-item input[type="radio"] {
+            margin-left: 6px;
+            margin-right: 0;
         }
         .gift-item:hover {
             background: rgba(255, 255, 255, 0.05);
@@ -437,6 +775,13 @@
             color: #999;
             border: 1px solid transparent;
         }
+        body.fa .gift-item-radio {
+            direction: ltr !important;
+        }
+        body.fa .gift-item-radio input[type="radio"] {
+            margin-left: 6px;
+            margin-right: 0;
+        }
         .gift-item-radio:hover {
             background: rgba(255, 255, 255, 0.05);
         }
@@ -468,6 +813,10 @@
             transition: all 0.3s ease;
             opacity: 0;
             pointer-events: none;
+        }
+        body.fa #scroll-controls {
+            right: auto;
+            left: 16px;
         }
         #scroll-controls.visible {
             opacity: 1;
@@ -507,12 +856,19 @@
             gap: 8px;
             margin-bottom: 12px;
         }
+        body.fa .stat-row {
+            direction: ltr !important;
+        }
         .stat-box {
             background: rgba(255, 255, 255, 0.02);
             border-radius: 12px;
             padding: 12px;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        body.fa .stat-box {
+            direction: ltr !important;
+            text-align: center !important;
         }
         .stat-box .label {
             font-size: 9px;
@@ -539,6 +895,9 @@
             flex-wrap: wrap;
             margin-bottom: 12px;
         }
+        body.fa .filter-row {
+            direction: rtl;
+        }
         .filter-chip {
             padding: 5px 12px;
             background: rgba(255, 255, 255, 0.03);
@@ -550,6 +909,10 @@
             border: 1px solid transparent;
             transition: all 0.25s ease;
             font-family: 'Inter', sans-serif;
+        }
+        body.fa .filter-chip {
+            font-family: 'Rubik', sans-serif;
+            direction: rtl;
         }
         .filter-chip:hover {
             color: #fff;
@@ -571,6 +934,9 @@
             overflow: hidden;
             padding: 6px 0;
         }
+        body.fa .chart-container {
+            direction: ltr !important;
+        }
         .chart-canvas {
             width: 100%;
             height: 100%;
@@ -590,6 +956,10 @@
             position: relative;
             border: 1px solid transparent;
         }
+        body.fa .trade-item {
+            direction: ltr !important;
+            text-align: left !important;
+        }
         .trade-item:active {
             transform: scale(0.98);
         }
@@ -600,12 +970,18 @@
             flex: 1;
             min-width: 0;
         }
+        body.fa .trade-item .left {
+            align-items: flex-start !important;
+        }
         .trade-item .left .name {
             font-weight: 600;
             font-size: 13px;
             display: flex;
             align-items: center;
             gap: 6px;
+        }
+        body.fa .trade-item .left .name {
+            flex-direction: row;
         }
         .trade-item .left .name .pin-icon {
             display: inline-flex;
@@ -624,6 +1000,9 @@
             text-align: right;
             flex-shrink: 0;
         }
+        body.fa .trade-item .right {
+            text-align: right !important;
+        }
         .trade-item .right .percent {
             font-weight: 700;
             font-size: 14px;
@@ -641,6 +1020,9 @@
             padding: 10px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
+        body.fa .waiting-item {
+            direction: rtl;
+        }
         .waiting-item:last-child {
             border-bottom: none;
         }
@@ -651,14 +1033,25 @@
             flex: 1;
             min-width: 0;
         }
+        body.fa .waiting-item .info {
+            align-items: flex-end;
+        }
         .waiting-item .info .name {
             font-weight: 500;
             font-size: 12px;
             word-break: break-word;
         }
+        body.fa .waiting-item .info .name {
+            direction: ltr !important;
+            text-align: left !important;
+        }
         .waiting-item .info .days {
             font-size: 10px;
             color: #555;
+        }
+        body.fa .waiting-item .info .days {
+            direction: ltr !important;
+            text-align: left !important;
         }
         .waiting-item .actions {
             display: flex;
@@ -667,6 +1060,10 @@
             flex-wrap: wrap;
             justify-content: flex-end;
             flex-shrink: 0;
+        }
+        body.fa .waiting-item .actions {
+            direction: ltr !important;
+            justify-content: flex-end;
         }
         .waiting-item .actions button {
             background: rgba(255, 255, 255, 0.03);
@@ -682,6 +1079,9 @@
             align-items: center;
             gap: 3px;
             white-space: nowrap;
+        }
+        body.fa .waiting-item .actions button {
+            font-family: 'Rubik', sans-serif;
         }
         .waiting-item .actions button:hover {
             background: rgba(255, 255, 255, 0.07);
@@ -713,6 +1113,9 @@
             max-height: 100%;
             padding-bottom: 12px;
         }
+        body.fa .chat-messages {
+            direction: ltr !important;
+        }
         .chat-msg {
             padding: 10px 14px;
             border-radius: 12px;
@@ -728,10 +1131,16 @@
             align-self: flex-start;
             background: rgba(255, 255, 255, 0.025);
         }
+        body.fa .chat-msg.bot {
+            align-self: flex-start;
+        }
         .chat-msg.user {
             align-self: flex-end;
             background: rgba(250, 204, 21, 0.06);
             border-color: rgba(250, 204, 21, 0.1);
+        }
+        body.fa .chat-msg.user {
+            align-self: flex-end;
         }
         .chat-msg .highlight-green {
             color: #22c55e;
@@ -755,9 +1164,16 @@
             padding: 10px 0 4px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
+        body.fa .chat-input-wrapper {
+            direction: ltr !important;
+        }
         .chat-input-row {
             display: flex;
             gap: 8px;
+        }
+        body.fa .chat-input-row {
+            direction: ltr !important;
+            flex-direction: row;
         }
         .chat-input-row input {
             flex: 1;
@@ -769,6 +1185,9 @@
             font-size: 13px;
             font-family: 'Inter', sans-serif;
             outline: none;
+        }
+        body.fa .chat-input-row input {
+            font-family: 'Rubik', sans-serif;
         }
         .chat-input-row input:focus {
             border-color: #facc15;
@@ -802,6 +1221,9 @@
             padding: 12px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
+        body.fa .settings-item {
+            direction: rtl;
+        }
         .settings-item:last-child {
             border-bottom: none;
         }
@@ -813,6 +1235,12 @@
             font-size: 11px;
             color: #555;
             margin-top: 2px;
+        }
+        body.fa .settings-item .left {
+            text-align: right;
+        }
+        body.fa .settings-item .btn-yellow {
+            direction: ltr;
         }
 
         /* ===== UTILITY ===== */
@@ -892,6 +1320,11 @@
             cursor: pointer;
             transition: all 0.25s ease;
         }
+        body.fa .code-block {
+            direction: ltr !important;
+            text-align: left !important;
+            font-family: 'Rubik', monospace;
+        }
         .code-block:hover {
             border-color: rgba(250, 204, 21, 0.15);
         }
@@ -902,6 +1335,10 @@
             color: #facc15;
             margin-bottom: 16px;
             letter-spacing: -0.5px;
+        }
+        body.fa .page-title {
+            text-align: right;
+            font-family: 'Rubik', sans-serif;
         }
 
         .gift-search {
@@ -916,6 +1353,11 @@
             outline: none;
             margin-bottom: 8px;
         }
+        body.fa .gift-search {
+            font-family: 'Rubik', sans-serif;
+            direction: ltr !important;
+            text-align: left !important;
+        }
         .gift-search:focus {
             border-color: #facc15;
         }
@@ -926,6 +1368,10 @@
             height: 7px;
             border-radius: 50%;
             margin-right: 5px;
+        }
+        body.fa .status-dot {
+            margin-right: 0;
+            margin-left: 5px;
         }
         .status-dot.green {
             background: #22c55e;
@@ -950,6 +1396,10 @@
             align-items: center;
             gap: 8px;
         }
+        body.fa .insight-item {
+            direction: ltr !important;
+            flex-direction: row;
+        }
         .insight-item:last-child {
             border-bottom: none;
         }
@@ -957,6 +1407,10 @@
             width: 16px;
             height: 16px;
             flex-shrink: 0;
+        }
+        body.fa .insight-item .icon {
+            margin-right: 8px;
+            margin-left: 0;
         }
         .insight-item .icon svg {
             width: 16px;
@@ -986,6 +1440,9 @@
                 flex-direction: column;
                 align-items: stretch;
                 gap: 6px;
+            }
+            body.fa .waiting-item {
+                flex-direction: column;
             }
             .waiting-item .actions {
                 justify-content: flex-start;
@@ -1043,41 +1500,42 @@
     </style>
 </head>
 <body>
+
     <div id="app">
 
         <!-- ===== PAGES ===== -->
         <!-- DASHBOARD -->
         <div id="page-dashboard" class="page active">
-            <div class="page-title">LUMO</div>
+            <div class="page-title" data-en="LUMO" data-fa="لومو">LUMO</div>
             <div id="alerts-container"></div>
 
             <!-- Filters -->
             <div class="glass" id="filter-section">
                 <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px;">
-                    <button class="filter-chip active" data-filter="gifts" onclick="toggleFilter('gifts')">Gifts</button>
-                    <button class="filter-chip" data-filter="time" onclick="toggleFilter('time')">Time</button>
-                    <button class="filter-chip" data-filter="zone" onclick="toggleFilter('zone')">Zone</button>
+                    <button class="filter-chip active" data-filter="gifts" onclick="toggleFilter('gifts')" data-en="Gifts" data-fa="گیفت‌ها">Gifts</button>
+                    <button class="filter-chip" data-filter="time" onclick="toggleFilter('time')" data-en="Time" data-fa="زمان">Time</button>
+                    <button class="filter-chip" data-filter="zone" onclick="toggleFilter('zone')" data-en="Zone" data-fa="زون">Zone</button>
                 </div>
                 <div id="filter-gifts" style="display:block;">
                     <div style="display:flex;gap:4px;align-items:center;flex-wrap:wrap;">
-                        <span style="font-size:11px;color:#666;">Selected:</span>
-                        <span id="selected-gifts-label" style="font-size:11px;color:#facc15;">All</span>
-                        <button class="btn-yellow" style="padding:3px 10px;font-size:10px;margin-left:auto;" onclick="openGiftSelector()">Edit</button>
+                        <span style="font-size:11px;color:#666;" data-en="Selected:" data-fa="انتخاب شده:">Selected:</span>
+                        <span id="selected-gifts-label" style="font-size:11px;color:#facc15;" data-en="All" data-fa="همه">All</span>
+                        <button class="btn-yellow" style="padding:3px 10px;font-size:10px;margin-left:auto;" onclick="openGiftSelector()" data-en="Edit" data-fa="ویرایش">Edit</button>
                     </div>
                 </div>
                 <div id="filter-time" style="display:none;">
                     <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center;">
-                        <button class="filter-chip" onclick="openDatePicker('start')">Start: <span id="filter-start-date">-</span></button>
-                        <button class="filter-chip" onclick="openDatePicker('end')">End: <span id="filter-end-date">-</span></button>
-                        <button class="btn-yellow" style="padding:3px 10px;font-size:10px;margin-left:auto;" onclick="openTimePresets()">Your Times</button>
+                        <button class="filter-chip" onclick="openDatePicker('start')" data-en="Start:" data-fa="شروع:">Start: <span id="filter-start-date">-</span></button>
+                        <button class="filter-chip" onclick="openDatePicker('end')" data-en="End:" data-fa="پایان:">End: <span id="filter-end-date">-</span></button>
+                        <button class="btn-yellow" style="padding:3px 10px;font-size:10px;margin-left:auto;" onclick="openTimePresets()" data-en="Your Times" data-fa="زمان‌های شما">Your Times</button>
                     </div>
                 </div>
                 <div id="filter-zone" style="display:none;">
                     <div style="display:flex;gap:4px;flex-wrap:wrap;">
-                        <button class="filter-chip active" data-zone="all" onclick="setZone('all')">All</button>
-                        <button class="filter-chip" data-zone="daily" onclick="setZone('daily')">Daily</button>
-                        <button class="filter-chip" data-zone="weekly" onclick="setZone('weekly')">Weekly</button>
-                        <button class="filter-chip" data-zone="monthly" onclick="setZone('monthly')">Monthly</button>
+                        <button class="filter-chip active" data-zone="all" onclick="setZone('all')" data-en="All" data-fa="همه">All</button>
+                        <button class="filter-chip" data-zone="daily" onclick="setZone('daily')" data-en="Daily" data-fa="روزانه">Daily</button>
+                        <button class="filter-chip" data-zone="weekly" onclick="setZone('weekly')" data-en="Weekly" data-fa="هفتگی">Weekly</button>
+                        <button class="filter-chip" data-zone="monthly" onclick="setZone('monthly')" data-en="Monthly" data-fa="ماهانه">Monthly</button>
                     </div>
                 </div>
             </div>
@@ -1085,17 +1543,17 @@
             <!-- Stats -->
             <div class="stat-row" id="stats-row">
                 <div class="stat-box">
-                    <div class="label">Win Rate</div>
+                    <div class="label" data-en="Win Rate" data-fa="نرخ برد">Win Rate</div>
                     <div class="value" id="win-rate">-</div>
-                    <div class="sub">min 10 trades</div>
+                    <div class="sub" data-en="min 10 trades" data-fa="حداقل ۱۰ معامله">min 10 trades</div>
                 </div>
                 <div class="stat-box">
-                    <div class="label">Total Trades</div>
+                    <div class="label" data-en="Total Trades" data-fa="کل معاملات">Total Trades</div>
                     <div class="value" id="total-trades">0</div>
-                    <div class="sub">trades</div>
+                    <div class="sub" data-en="trades" data-fa="معامله">trades</div>
                 </div>
                 <div class="stat-box">
-                    <div class="label">All Profit</div>
+                    <div class="label" data-en="All Profit" data-fa="سود کل">All Profit</div>
                     <div class="value" id="all-profit">-</div>
                     <div class="sub" id="all-profit-sub">+0 / -0</div>
                 </div>
@@ -1104,7 +1562,7 @@
             <!-- Chart -->
             <div class="glass">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px;">
-                    <span style="font-size:13px;font-weight:600;color:#facc15;">Status Chart</span>
+                    <span style="font-size:13px;font-weight:600;color:#facc15;" data-en="Status Chart" data-fa="نمودار وضعیت">Status Chart</span>
                     <span style="font-size:9px;color:#555;">LUMO</span>
                 </div>
                 <div class="chart-container">
@@ -1118,33 +1576,33 @@
 
             <!-- Overview -->
             <div class="glass">
-                <div style="font-size:13px;font-weight:600;color:#facc15;margin-bottom:6px;">Overview</div>
+                <div style="font-size:13px;font-weight:600;color:#facc15;margin-bottom:6px;" data-en="Overview" data-fa="نمای کلی">Overview</div>
                 <div id="overview-list">
-                    <div style="text-align:center;color:#444;font-size:12px;padding:20px 0;">No trades yet</div>
+                    <div style="text-align:center;color:#444;font-size:12px;padding:20px 0;" data-en="No trades yet" data-fa="هنوز معامله‌ای ثبت نشده">No trades yet</div>
                 </div>
             </div>
 
             <!-- Waiting -->
             <div class="glass">
-                <div style="font-size:13px;font-weight:600;color:#facc15;margin-bottom:6px;">Waiting</div>
+                <div style="font-size:13px;font-weight:600;color:#facc15;margin-bottom:6px;" data-en="Waiting" data-fa="در انتظار">Waiting</div>
                 <div id="waiting-list">
-                    <div style="text-align:center;color:#444;font-size:12px;padding:12px 0;">No waiting gifts</div>
+                    <div style="text-align:center;color:#444;font-size:12px;padding:12px 0;" data-en="No waiting gifts" data-fa="هیچ گیفتی در انتظار نیست">No waiting gifts</div>
                 </div>
             </div>
 
             <!-- Risk Alert -->
             <div class="glass" id="risk-alert-box">
-                <div style="font-size:13px;font-weight:600;color:#facc15;margin-bottom:6px;">Risk Alert</div>
+                <div style="font-size:13px;font-weight:600;color:#facc15;margin-bottom:6px;" data-en="Risk Alert" data-fa="هشدار ریسک">Risk Alert</div>
                 <div id="risk-alert-content">
-                    <div style="text-align:center;color:#444;font-size:12px;padding:12px 0;">No risk alerts</div>
+                    <div style="text-align:center;color:#444;font-size:12px;padding:12px 0;" data-en="No risk alerts" data-fa="هشدار ریسکی وجود ندارد">No risk alerts</div>
                 </div>
             </div>
 
             <!-- AI Analytics Section -->
             <div class="glass" id="ai-section">
-                <div style="font-size:13px;font-weight:600;color:#facc15;margin-bottom:6px;">AI Analytics</div>
+                <div style="font-size:13px;font-weight:600;color:#facc15;margin-bottom:6px;" data-en="AI Analytics" data-fa="تحلیل هوش مصنوعی">AI Analytics</div>
                 <div id="ai-content">
-                    <div style="text-align:center;color:#444;font-size:12px;padding:12px 0;">Waiting for more data...</div>
+                    <div style="text-align:center;color:#444;font-size:12px;padding:12px 0;" data-en="Waiting for more data..." data-fa="در انتظار داده‌های بیشتر...">Waiting for more data...</div>
                 </div>
             </div>
         </div>
@@ -1152,13 +1610,13 @@
         <!-- TRADES -->
         <div id="page-trades" class="page">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-                <div class="page-title" style="margin-bottom:0;font-size:20px;">Trades</div>
+                <div class="page-title" style="margin-bottom:0;font-size:20px;" data-en="Trades" data-fa="تریدها">Trades</div>
                 <div style="display:flex;gap:8px;align-items:center;">
-                    <button class="btn-yellow" style="padding:6px 12px;font-size:11px;gap:4px;" onclick="openAddTrade()">Add</button>
+                    <button class="btn-yellow" style="padding:6px 12px;font-size:11px;gap:4px;" onclick="openAddTrade()" data-en="Add" data-fa="افزودن">Add</button>
                 </div>
             </div>
             <div id="trades-list">
-                <div style="text-align:center;color:#444;font-size:13px;padding:40px 0;">No trades recorded</div>
+                <div style="text-align:center;color:#444;font-size:13px;padding:40px 0;" data-en="No trades recorded" data-fa="هیچ معامله‌ای ثبت نشده">No trades recorded</div>
             </div>
         </div>
 
@@ -1170,16 +1628,16 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                     </svg>
                 </button>
-                <span class="ai-title">LUMO AI</span>
+                <span class="ai-title" data-en="LUMO AI" data-fa="هوش مصنوعی لومو">LUMO AI</span>
                 <span class="ai-spacer"></span>
             </div>
             <div class="chat-container">
                 <div class="chat-messages" id="chat-messages">
-                    <div class="chat-msg bot">Hello. I am your LUMO AI assistant. Ask about a gift, a trade, or type "Status" for full analytics.</div>
+                    <div class="chat-msg bot" data-en="Hello. I am your LUMO AI assistant. Ask about a gift, a trade, or type &quot;Status&quot; for full analytics." data-fa="سلام. من دستیار هوش مصنوعی لومو هستم. درباره یک گیفت، یک معامله بپرسید یا برای دریافت تحلیل کامل &quot;Status&quot; را تایپ کنید.">Hello. I am your LUMO AI assistant. Ask about a gift, a trade, or type "Status" for full analytics.</div>
                 </div>
                 <div class="chat-input-wrapper">
                     <div class="chat-input-row">
-                        <input type="text" id="chat-input" placeholder="Ask about a gift or trade..." onkeydown="if(event.key==='Enter')sendChat()" />
+                        <input type="text" id="chat-input" placeholder="Ask about a gift or trade..." onkeydown="if(event.key==='Enter')sendChat()" data-en="Ask about a gift or trade..." data-fa="درباره یک گیفت یا معامله بپرسید..." />
                         <button onclick="sendChat()">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
@@ -1190,31 +1648,32 @@
             </div>
         </div>
 
+        <!-- NAVBAR -->
         <nav id="navbar">
             <button class="nav-item active" data-page="dashboard" onclick="switchPage('dashboard')">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
                 </svg>
-                <span class="label">Dashboard</span>
+                <span class="label" data-en="Dashboard" data-fa="داشبورد">Dashboard</span>
             </button>
             <button class="nav-item" data-page="trades" onclick="switchPage('trades')">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
                 </svg>
-                <span class="label">Trades</span>
+                <span class="label" data-en="Trades" data-fa="تریدها">Trades</span>
             </button>
             <button class="nav-item" data-page="ai" onclick="switchPage('ai')">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
                 </svg>
-                <span class="label">AI</span>
+                <span class="label" data-en="AI" data-fa="هوش مصنوعی">AI</span>
             </button>
             <button class="nav-item" data-page="settings" onclick="openSettings()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
-                <span class="label">Settings</span>
+                <span class="label" data-en="Settings" data-fa="تنظیمات">Settings</span>
             </button>
         </nav>
 
@@ -1239,30 +1698,30 @@
     <div class="modal-overlay" id="modal-add-trade">
         <div class="modal-box">
             <button class="modal-close" onclick="closeModal('modal-add-trade')">&times;</button>
-            <h3 id="add-trade-title">Add Trade</h3>
+            <h3 id="add-trade-title" data-en="Add Trade" data-fa="افزودن معامله">Add Trade</h3>
             <form id="add-trade-form" onsubmit="submitTrade(event)">
                 <div class="form-group">
-                    <label>Gift Type</label>
-                    <input type="text" id="trade-gift-search" placeholder="Search gift..." class="gift-search" oninput="filterGiftList('trade-gift-search','trade-gift-list')" />
+                    <label data-en="Gift Type" data-fa="نوع گیفت">Gift Type</label>
+                    <input type="text" id="trade-gift-search" placeholder="Search gift..." class="gift-search" oninput="filterGiftList('trade-gift-search','trade-gift-list')" data-en="Search gift..." data-fa="جستجوی گیفت..." />
                     <div class="gift-grid" id="trade-gift-list"></div>
                     <input type="hidden" id="trade-gift-type" required />
                 </div>
                 <div class="form-group">
-                    <label>Gift Number</label>
+                    <label data-en="Gift Number" data-fa="شماره گیفت">Gift Number</label>
                     <div style="display:flex;align-items:center;gap:4px;background:rgba(255,255,255,0.04);border-radius:10px;border:1px solid rgba(255,255,255,0.06);padding:0 12px;">
                         <span style="color:#555;font-size:16px;font-weight:300;">#</span>
                         <input type="text" id="trade-gift-number" placeholder="1,229" style="border:none;background:transparent;padding:10px 0;color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;width:100%;" oninput="formatNumber(this)" required />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Buy Price</label>
-                    <input type="number" id="trade-buy-price" placeholder="Enter buy price" required />
+                    <label data-en="Buy Price" data-fa="قیمت خرید">Buy Price</label>
+                    <input type="number" id="trade-buy-price" placeholder="Enter buy price" required data-en="Enter buy price" data-fa="قیمت خرید را وارد کنید" />
                 </div>
                 <div class="form-group">
-                    <label>Sell Price (optional)</label>
-                    <input type="number" id="trade-sell-price" placeholder="Enter sell price (leave empty for waiting)" />
+                    <label data-en="Sell Price (optional)" data-fa="قیمت فروش (اختیاری)">Sell Price (optional)</label>
+                    <input type="number" id="trade-sell-price" placeholder="Enter sell price (leave empty for waiting)" data-en="Enter sell price (leave empty for waiting)" data-fa="قیمت فروش را وارد کنید (برای در انتظار خالی بگذارید)" />
                 </div>
-                <button type="submit" class="btn-submit" id="add-trade-submit">Submit Trade</button>
+                <button type="submit" class="btn-submit" id="add-trade-submit" data-en="Submit Trade" data-fa="ثبت معامله">Submit Trade</button>
             </form>
         </div>
     </div>
@@ -1271,12 +1730,12 @@
     <div class="modal-overlay" id="modal-waiting-days">
         <div class="modal-box">
             <button class="modal-close" onclick="closeModal('modal-waiting-days')">&times;</button>
-            <h3>When can you resell?</h3>
+            <h3 data-en="When can you resell?" data-fa="چه زمانی می‌توانید بفروشید؟">When can you resell?</h3>
             <div class="form-group">
-                <label>Days until resell</label>
-                <input type="number" id="waiting-days-input" placeholder="Enter number of days" min="1" required />
+                <label data-en="Days until resell" data-fa="روز تا فروش مجدد">Days until resell</label>
+                <input type="number" id="waiting-days-input" placeholder="Enter number of days" min="1" required data-en="Enter number of days" data-fa="تعداد روز را وارد کنید" />
             </div>
-            <button class="btn-submit" onclick="confirmWaitingDays()">Confirm</button>
+            <button class="btn-submit" onclick="confirmWaitingDays()" data-en="Confirm" data-fa="تأیید">Confirm</button>
         </div>
     </div>
 
@@ -1284,13 +1743,13 @@
     <div class="modal-overlay" id="modal-specify">
         <div class="modal-box">
             <button class="modal-close" onclick="closeModal('modal-specify')">&times;</button>
-            <h3>List the price you want</h3>
+            <h3 data-en="List the price you want" data-fa="قیمت مورد نظر خود را وارد کنید">List the price you want</h3>
             <div class="form-group">
-                <label>Price</label>
-                <input type="number" id="specify-price-input" placeholder="Enter price" required />
+                <label data-en="Price" data-fa="قیمت">Price</label>
+                <input type="number" id="specify-price-input" placeholder="Enter price" required data-en="Enter price" data-fa="قیمت را وارد کنید" />
             </div>
             <div id="specify-preview" style="background:rgba(0,0,0,0.3);border-radius:10px;padding:12px;margin:8px 0;font-size:12px;color:#888;"></div>
-            <button class="btn-submit" onclick="confirmSpecify()">Confirm</button>
+            <button class="btn-submit" onclick="confirmSpecify()" data-en="Confirm" data-fa="تأیید">Confirm</button>
         </div>
     </div>
 
@@ -1298,14 +1757,14 @@
     <div class="modal-overlay" id="modal-gift-selector">
         <div class="modal-box">
             <button class="modal-close" onclick="closeModal('modal-gift-selector')">&times;</button>
-            <h3>Select Gifts</h3>
-            <input type="text" id="gift-selector-search" placeholder="Search gifts..." class="gift-search" oninput="filterGiftList('gift-selector-search','gift-selector-list')" />
+            <h3 data-en="Select Gifts" data-fa="انتخاب گیفت‌ها">Select Gifts</h3>
+            <input type="text" id="gift-selector-search" placeholder="Search gifts..." class="gift-search" oninput="filterGiftList('gift-selector-search','gift-selector-list')" data-en="Search gifts..." data-fa="جستجوی گیفت‌ها..." />
             <div style="display:flex;gap:4px;margin-bottom:6px;flex-wrap:wrap;">
-                <button class="filter-chip" onclick="selectAllGifts(true)">All</button>
-                <button class="filter-chip" onclick="selectAllGifts(false)">None</button>
+                <button class="filter-chip" onclick="selectAllGifts(true)" data-en="All" data-fa="همه">All</button>
+                <button class="filter-chip" onclick="selectAllGifts(false)" data-en="None" data-fa="هیچ‌کدام">None</button>
             </div>
             <div class="gift-grid" id="gift-selector-list"></div>
-            <button class="btn-submit" style="margin-top:12px;" onclick="confirmGiftSelection()">Apply</button>
+            <button class="btn-submit" style="margin-top:12px;" onclick="confirmGiftSelection()" data-en="Apply" data-fa="اعمال">Apply</button>
         </div>
     </div>
 
@@ -1313,92 +1772,103 @@
     <div class="modal-overlay" id="modal-time-presets">
         <div class="modal-box">
             <button class="modal-close" onclick="closeModal('modal-time-presets')">&times;</button>
-            <h3>Your Times</h3>
+            <h3 data-en="Your Times" data-fa="زمان‌های شما">Your Times</h3>
             <div id="time-presets-list"></div>
         </div>
     </div>
 
     <!-- Settings Modal -->
-<div class="modal-overlay" id="modal-settings">
-    <div class="modal-box" style="max-width:500px;">
-        <button class="modal-close" onclick="closeModal('modal-settings')">&times;</button>
-        <h3>Data Management</h3>
-        <div class="settings-item">
-            <div class="left">
-                <div class="title">Trades History PDF</div>
-                <div class="desc">Export all trades with profit/loss details</div>
+    <div class="modal-overlay" id="modal-settings">
+        <div class="modal-box" style="max-width:500px;">
+            <button class="modal-close" onclick="closeModal('modal-settings')">&times;</button>
+            <h3 data-en="Data Management" data-fa="مدیریت داده‌ها">Data Management</h3>
+
+            <!-- Language Setting -->
+            <div class="lang-setting-item">
+                <div class="left">
+                    <div class="title" data-en="Language" data-fa="زبان">Language</div>
+                    <div class="desc" data-en="Switch between English and Persian" data-fa="تغییر بین انگلیسی و فارسی">Switch between English and Persian</div>
+                </div>
+                <button class="lang-toggle-inline" id="settingsLangToggle" onclick="toggleLanguage()">
+                    🇬🇧 EN
+                </button>
             </div>
-            <button class="btn-yellow" onclick="exportTradesPDF()">Export</button>
-        </div>
-        <div class="settings-item">
-            <div class="left">
-                <div class="title">Back Up Code</div>
-                <div class="desc">Generate a backup code for all data</div>
+
+            <div class="settings-item">
+                <div class="left">
+                    <div class="title" data-en="Trades History PDF" data-fa="خروجی PDF تاریخچه معاملات">Trades History PDF</div>
+                    <div class="desc" data-en="Export all trades with profit/loss details" data-fa="خروجی کامل معاملات با جزئیات سود و زیان">Export all trades with profit/loss details</div>
+                </div>
+                <button class="btn-yellow" onclick="exportTradesPDF()" data-en="Export" data-fa="خروجی">Export</button>
             </div>
-            <button class="btn-yellow" onclick="generateBackupCode()">Generate</button>
-        </div>
-        <div class="settings-item">
-            <div class="left">
-                <div class="title">Import Data</div>
-                <div class="desc">Restore data from backup code</div>
+            <div class="settings-item">
+                <div class="left">
+                    <div class="title" data-en="Back Up Code" data-fa="کد پشتیبان">Back Up Code</div>
+                    <div class="desc" data-en="Generate a backup code for all data" data-fa="تولید کد پشتیبان برای تمام داده‌ها">Generate a backup code for all data</div>
+                </div>
+                <button class="btn-yellow" onclick="generateBackupCode()" data-en="Generate" data-fa="تولید">Generate</button>
             </div>
-            <button class="btn-yellow" onclick="openImportModal()">Import</button>
-        </div>
-        <div class="settings-item">
-            <div class="left">
-                <div class="title">AI Manager Code</div>
-                <div class="desc">Export AI data as JSON</div>
+            <div class="settings-item">
+                <div class="left">
+                    <div class="title" data-en="Import Data" data-fa="وارد کردن داده">Import Data</div>
+                    <div class="desc" data-en="Restore data from backup code" data-fa="بازیابی داده از کد پشتیبان">Restore data from backup code</div>
+                </div>
+                <button class="btn-yellow" onclick="openImportModal()" data-en="Import" data-fa="وارد کردن">Import</button>
             </div>
-            <button class="btn-yellow" onclick="exportAIManager()">Export</button>
-        </div>
-        <div class="settings-item" style="border-bottom:none;">
-            <div class="left">
-                <div class="title" style="color:#ef4444;">Reset Data</div>
-                <div class="desc">Permanently delete all data</div>
+            <div class="settings-item">
+                <div class="left">
+                    <div class="title" data-en="AI Manager Code" data-fa="کد مدیریت هوش مصنوعی">AI Manager Code</div>
+                    <div class="desc" data-en="Export AI data as JSON" data-fa="خروجی داده‌های هوش مصنوعی به صورت JSON">Export AI data as JSON</div>
+                </div>
+                <button class="btn-yellow" onclick="exportAIManager()" data-en="Export" data-fa="خروجی">Export</button>
             </div>
-            <button class="btn-yellow" style="border-color:rgba(239,68,68,0.2);color:#ef4444;" onclick="confirmReset()">Reset</button>
-        </div>
-        <div class="divider"></div>
-        <div style="text-align:center;padding:6px 0;">
-            <a href="#" onclick="window.open('t.me://@geloriu','_blank');return false;" style="color:#facc15;text-decoration:none;font-size:12px;font-weight:500;">Support: @geloriu</a>
+            <div class="settings-item" style="border-bottom:none;">
+                <div class="left">
+                    <div class="title" style="color:#ef4444;" data-en="Reset Data" data-fa="بازنشانی داده‌ها">Reset Data</div>
+                    <div class="desc" data-en="Permanently delete all data" data-fa="حذف دائمی تمام داده‌ها">Permanently delete all data</div>
+                </div>
+                <button class="btn-yellow" style="border-color:rgba(239,68,68,0.2);color:#ef4444;" onclick="confirmReset()" data-en="Reset" data-fa="بازنشانی">Reset</button>
+            </div>
+            <div class="divider"></div>
+            <div style="text-align:center;padding:6px 0;">
+                <a href="#" onclick="window.open('t.me://@geloriu','_blank');return false;" style="color:#facc15;text-decoration:none;font-size:12px;font-weight:500;">Support: @geloriu</a>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Backup Code Modal -->
-<div class="modal-overlay" id="modal-backup-code">
-    <div class="modal-box" style="max-width:440px;">
-        <button class="modal-close" onclick="closeModal('modal-backup-code')">&times;</button>
-        <h3>Backup Code</h3>
-        <p style="color:#888;font-size:13px;margin:8px 0 12px 0;">Copy this code to restore your data later</p>
-        <div class="code-block" id="backup-code-display" style="font-size:12px;padding:14px;word-break:break-all;cursor:pointer;" onclick="copyBackupCode()">Click to copy</div>
-        <button class="btn-yellow" onclick="copyBackupCode()" style="width:100%;justify-content:center;margin-top:12px;">Copy Code</button>
-    </div>
-</div>
-
-<!-- Import Data Modal -->
-<div class="modal-overlay" id="modal-import">
-    <div class="modal-box" style="max-width:440px;">
-        <button class="modal-close" onclick="closeModal('modal-import')">&times;</button>
-        <h3>Import Data</h3>
-        <p style="color:#888;font-size:13px;margin:8px 0 12px 0;">Paste your backup code to restore data</p>
-        <div class="form-group">
-            <label>Backup Code</label>
-            <textarea id="import-code-input" style="width:100%;padding:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:10px;color:#fff;font-size:13px;font-family:'Inter',monospace;min-height:100px;resize:vertical;outline:none;" placeholder="Paste your backup code here..."></textarea>
+    <!-- Backup Code Modal -->
+    <div class="modal-overlay" id="modal-backup-code">
+        <div class="modal-box" style="max-width:440px;">
+            <button class="modal-close" onclick="closeModal('modal-backup-code')">&times;</button>
+            <h3 data-en="Backup Code" data-fa="کد پشتیبان">Backup Code</h3>
+            <p style="color:#888;font-size:13px;margin:8px 0 12px 0;" data-en="Copy this code to restore your data later" data-fa="این کد را برای بازیابی داده‌های خود کپی کنید">Copy this code to restore your data later</p>
+            <div class="code-block" id="backup-code-display" style="font-size:12px;padding:14px;word-break:break-all;cursor:pointer;" onclick="copyBackupCode()">Click to copy</div>
+            <button class="btn-yellow" onclick="copyBackupCode()" style="width:100%;justify-content:center;margin-top:12px;" data-en="Copy Code" data-fa="کپی کد">Copy Code</button>
         </div>
-        <button class="btn-submit" onclick="importData()">Import Data</button>
     </div>
-</div>
 
+    <!-- Import Data Modal -->
+    <div class="modal-overlay" id="modal-import">
+        <div class="modal-box" style="max-width:440px;">
+            <button class="modal-close" onclick="closeModal('modal-import')">&times;</button>
+            <h3 data-en="Import Data" data-fa="وارد کردن داده">Import Data</h3>
+            <p style="color:#888;font-size:13px;margin:8px 0 12px 0;" data-en="Paste your backup code to restore data" data-fa="کد پشتیبان خود را برای بازیابی داده بچسبانید">Paste your backup code to restore data</p>
+            <div class="form-group">
+                <label data-en="Backup Code" data-fa="کد پشتیبان">Backup Code</label>
+                <textarea id="import-code-input" style="width:100%;padding:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:10px;color:#fff;font-size:13px;font-family:'Inter',monospace;min-height:100px;resize:vertical;outline:none;" placeholder="Paste your backup code here..." data-en="Paste your backup code here..." data-fa="کد پشتیبان خود را اینجا بچسبانید..."></textarea>
+            </div>
+            <button class="btn-submit" onclick="importData()" data-en="Import Data" data-fa="وارد کردن داده">Import Data</button>
+        </div>
+    </div>
 
     <!-- Confirm Reset Modal -->
     <div class="modal-overlay" id="modal-confirm-reset">
         <div class="modal-box" style="max-width:360px;">
-            <h3>Confirm Reset</h3>
-            <p style="color:#888;font-size:13px;margin:12px 0;">Are you sure you want to permanently delete all data?</p>
+            <h3 data-en="Confirm Reset" data-fa="تأیید بازنشانی">Confirm Reset</h3>
+            <p style="color:#888;font-size:13px;margin:12px 0;" data-en="Are you sure you want to permanently delete all data?" data-fa="آیا مطمئن هستید که می‌خواهید تمام داده‌ها را به طور دائمی حذف کنید؟">Are you sure you want to permanently delete all data?</p>
             <div style="display:flex;gap:8px;">
-                <button class="btn-yellow" style="flex:1;justify-content:center;" onclick="closeModal('modal-confirm-reset')">Cancel</button>
-                <button class="btn-yellow" style="flex:1;justify-content:center;border-color:rgba(239,68,68,0.2);color:#ef4444;" onclick="resetAllData()">Delete</button>
+                <button class="btn-yellow" style="flex:1;justify-content:center;" onclick="closeModal('modal-confirm-reset')" data-en="Cancel" data-fa="لغو">Cancel</button>
+                <button class="btn-yellow" style="flex:1;justify-content:center;border-color:rgba(239,68,68,0.2);color:#ef4444;" onclick="resetAllData()" data-en="Delete" data-fa="حذف">Delete</button>
             </div>
         </div>
     </div>
@@ -1407,17 +1877,17 @@
     <div class="modal-overlay" id="modal-chat-pdf">
         <div class="modal-box" style="max-width:400px;">
             <button class="modal-close" onclick="closeModal('modal-chat-pdf')">&times;</button>
-            <h3>Your Analytics</h3>
+            <h3 data-en="Your Analytics" data-fa="تحلیل شما">Your Analytics</h3>
             <div id="chat-pdf-content" style="margin:12px 0;font-size:13px;line-height:1.6;color:#ccc;white-space:pre-wrap;"></div>
             <div style="display:flex;flex-direction:column;gap:6px;align-items:center;">
-                <button class="btn-yellow" onclick="downloadChatPDF()" style="width:100%;justify-content:center;">
+                <button class="btn-yellow" onclick="downloadChatPDF()" style="width:100%;justify-content:center;" data-en="Download" data-fa="دانلود">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:18px;height:18px;">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
                     </svg>
                     Download
                 </button>
                 <div style="width:100%;">
-                    <div style="font-size:10px;color:#555;text-align:center;margin-bottom:3px;">Code</div>
+                    <div style="font-size:10px;color:#555;text-align:center;margin-bottom:3px;" data-en="Code" data-fa="کد">Code</div>
                     <div class="code-block" id="chat-pdf-code" onclick="copyCode(this)">Click to generate code</div>
                 </div>
             </div>
@@ -1428,15 +1898,72 @@
     <div class="modal-overlay" id="modal-trade-action">
         <div class="modal-box" style="max-width:360px;">
             <button class="modal-close" onclick="closeModal('modal-trade-action')">&times;</button>
-            <h3 id="trade-action-title">Trade Actions</h3>
+            <h3 id="trade-action-title" data-en="Trade Actions" data-fa="عملیات معامله">Trade Actions</h3>
             <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
-                <button class="btn-yellow" onclick="actionEditTrade()" style="width:100%;justify-content:center;padding:10px;">Edit</button>
-                <button class="btn-yellow" onclick="actionDeleteTrade()" style="width:100%;justify-content:center;padding:10px;border-color:rgba(239,68,68,0.2);color:#ef4444;">Delete</button>
-                <button class="btn-yellow" id="action-pin-btn" onclick="actionPinTrade()" style="width:100%;justify-content:center;padding:10px;">Pin</button>
+                <button class="btn-yellow" onclick="actionEditTrade()" style="width:100%;justify-content:center;padding:10px;" data-en="Edit" data-fa="ویرایش">Edit</button>
+                <button class="btn-yellow" onclick="actionDeleteTrade()" style="width:100%;justify-content:center;padding:10px;border-color:rgba(239,68,68,0.2);color:#ef4444;" data-en="Delete" data-fa="حذف">Delete</button>
+                <button class="btn-yellow" id="action-pin-btn" onclick="actionPinTrade()" style="width:100%;justify-content:center;padding:10px;" data-en="Pin" data-fa="سنجاق">Pin</button>
             </div>
         </div>
     </div>
+
     <script>
+        // ============================================================
+        // LANGUAGE TOGGLE
+        // ============================================================
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            const body = document.body;
+            const btn = document.getElementById('settingsLangToggle');
+
+            if (currentLang === 'en') {
+                body.classList.add('fa');
+                btn.textContent = '🇮🇷 FA';
+                currentLang = 'fa';
+                localStorage.setItem('lumo_lang', 'fa');
+            } else {
+                body.classList.remove('fa');
+                btn.textContent = '🇬🇧 EN';
+                currentLang = 'en';
+                localStorage.setItem('lumo_lang', 'en');
+            }
+            updateTexts(currentLang);
+        }
+
+        function updateTexts(lang) {
+            document.querySelectorAll('[data-en][data-fa]').forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = text;
+                    } else if (el.children.length === 0) {
+                        el.textContent = text;
+                    } else {
+                        el.childNodes.forEach(node => {
+                            if (node.nodeType === 3) {
+                                node.textContent = text;
+                            }
+                        });
+                    }
+                }
+            });
+
+            document.querySelectorAll('input[data-en][data-fa], textarea[data-en][data-fa]').forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) {
+                    el.placeholder = text;
+                }
+            });
+
+            document.querySelectorAll('button[data-en][data-fa]').forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text && el.children.length === 0) {
+                    el.textContent = text;
+                }
+            });
+        }
+
         // ============================================================
         // DATA
         // ============================================================
@@ -1482,11 +2009,18 @@
         let selectedTradeGift = null;
         let editingTradeId = null;
         let actionTradeId = null;
-
+        let chatMessages = [];
         // ============================================================
         // INIT
         // ============================================================
         document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('lumo_lang');
+            if (savedLang === 'fa') {
+                document.body.classList.add('fa');
+                document.getElementById('settingsLangToggle').textContent = '🇮🇷 FA';
+                currentLang = 'fa';
+                updateTexts('fa');
+            }
             loadData();
             renderAll();
             setupScrollDetection();
@@ -1619,7 +2153,6 @@
             return hash + ':' + encoded;
         }
 
-        // NEW: Decode backup hash
         function decodeBackupHash(code) {
             try {
                 const parts = code.split(':');
@@ -1724,7 +2257,8 @@
                         `;
                 });
             }
-            container.innerHTML = html || '<div style="color:#444;padding:12px;text-align:center;font-size:12px;">No gifts found</div>';
+            container.innerHTML = html ||
+            '<div style="color:#444;padding:12px;text-align:center;font-size:12px;">No gifts found</div>';
         }
 
         function toggleGiftSelection(gift, containerId) {
@@ -1917,7 +2451,7 @@
             const container = document.getElementById('overview-list');
             if (trades.length === 0) {
                 container.innerHTML =
-                    '<div style="text-align:center;color:#444;font-size:12px;padding:20px 0;">No trades yet</div>';
+                    '<div style="text-align:center;color:#444;font-size:12px;padding:20px 0;" data-en="No trades yet" data-fa="هنوز معامله‌ای ثبت نشده">No trades yet</div>';
                 return;
             }
 
@@ -1932,7 +2466,8 @@
 
             let html = '';
             if (profitTrades.length > 0) {
-                html += '<div style="font-size:10px;color:#555;margin-bottom:4px;">Best Trades (>18%)</div>';
+                html +=
+                    '<div style="font-size:10px;color:#555;margin-bottom:4px;" data-en="Best Trades (>18%)" data-fa="بهترین معاملات (&gt;۱۸٪)">Best Trades (>18%)</div>';
                 profitTrades.forEach(t => {
                     html += `
                             <div style="display:flex;justify-content:space-between;padding:3px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,0.02);">
@@ -1944,7 +2479,8 @@
             }
 
             if (lossTrades.length > 0) {
-                html += '<div style="font-size:10px;color:#555;margin:6px 0 4px 0;">Worst Trades (>6%)</div>';
+                html +=
+                    '<div style="font-size:10px;color:#555;margin:6px 0 4px 0;" data-en="Worst Trades (>6%)" data-fa="بدترین معاملات (&gt;۶٪)">Worst Trades (>6%)</div>';
                 lossTrades.forEach(t => {
                     html += `
                             <div style="display:flex;justify-content:space-between;padding:3px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,0.02);">
@@ -1956,7 +2492,7 @@
             }
 
             container.innerHTML = html ||
-                '<div style="text-align:center;color:#444;font-size:12px;padding:12px 0;">No trades meet criteria</div>';
+                '<div style="text-align:center;color:#444;font-size:12px;padding:12px 0;" data-en="No trades meet criteria" data-fa="هیچ معامله‌ای با معیارها مطابقت ندارد">No trades meet criteria</div>';
         }
 
         function updateWaiting() {
@@ -1965,7 +2501,7 @@
 
             if (waiting.length === 0) {
                 container.innerHTML =
-                    '<div style="text-align:center;color:#444;font-size:12px;padding:12px 0;">No waiting gifts</div>';
+                    '<div style="text-align:center;color:#444;font-size:12px;padding:12px 0;" data-en="No waiting gifts" data-fa="هیچ گیفتی در انتظار نیست">No waiting gifts</div>';
                 return;
             }
 
@@ -2052,7 +2588,7 @@
 
             if (risky.length === 0) {
                 container.innerHTML =
-                    '<div style="text-align:center;color:#444;font-size:12px;padding:12px 0;">No risk alerts</div>';
+                    '<div style="text-align:center;color:#444;font-size:12px;padding:12px 0;" data-en="No risk alerts" data-fa="هشدار ریسکی وجود ندارد">No risk alerts</div>';
             } else {
                 container.innerHTML = risky.map(r =>
                     `<div style="padding:4px 0;font-size:12px;color:#ef4444;border-bottom:1px solid rgba(239,68,68,0.04);">${r}</div>`
@@ -2064,14 +2600,13 @@
             const container = document.getElementById('ai-content');
             if (trades.length < 10) {
                 container.innerHTML =
-                    '<div style="text-align:center;color:#444;font-size:12px;padding:12px 0;">Need at least 10 trades for AI analysis</div>';
+                    '<div style="text-align:center;color:#444;font-size:12px;padding:12px 0;" data-en="Need at least 10 trades for AI analysis" data-fa="برای تحلیل هوش مصنوعی حداقل به ۱۰ معامله نیاز است">Need at least 10 trades for AI analysis</div>';
                 return;
             }
 
             const insights = [];
             const now = new Date();
 
-            // 1. Fast selling gifts (sold within 1 day after specify)
             trades.forEach(t => {
                 if (t.specifyPrice && t.sellDate && t.status !== 'waiting') {
                     const daysFromSpecify = daysBetween(t.specifyDate || t.createdAt, t.sellDate);
@@ -2084,7 +2619,6 @@
                 }
             });
 
-            // 2. Good gifts (profit > 15% multiple times)
             const giftProfits = {};
             trades.forEach(t => {
                 if (t.status === 'profit') {
@@ -2103,7 +2637,6 @@
                 }
             });
 
-            // 3. Hot streak (3+ consecutive wins)
             const sorted = [...trades].sort((a, b) => {
                 const da = parseDate(a.createdAt);
                 const db = parseDate(b.createdAt);
@@ -2116,7 +2649,6 @@
             }
             if (streak >= 3) insights.push(`Hot streak! ${streak} consecutive wins`);
 
-            // 4. Cold streak (3+ consecutive losses)
             let lossStreak = 0;
             for (let t of sorted) {
                 if (t.status === 'loss') lossStreak++;
@@ -2124,7 +2656,6 @@
             }
             if (lossStreak >= 3) insights.push(`Cold streak! ${lossStreak} consecutive losses`);
 
-            // 5. Best performer this week
             const weekAgo = new Date(now);
             weekAgo.setDate(weekAgo.getDate() - 7);
             const weekTrades = trades.filter(t => {
@@ -2146,7 +2677,6 @@
             });
             if (bestWeek && bestWeekVal > 0) insights.push(`${bestWeek} is the best performer this week`);
 
-            // 6. Worst performer this week
             let worstWeek = null;
             let worstWeekVal = 0;
             Object.keys(weekPerf).forEach(g => {
@@ -2157,7 +2687,6 @@
             });
             if (worstWeek && worstWeekVal < 0) insights.push(`${worstWeek} is the worst performer this week`);
 
-            // 7. Weekly growth
             const twoWeeksAgo = new Date(now);
             twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
             const thisWeekProfit = trades.filter(t => {
@@ -2173,33 +2702,28 @@
                 if (growth > 10) insights.push(`You're up ${Math.round(growth)}% this week`);
             }
 
-            // 8. Consider taking profits
             trades.forEach(t => {
                 if (t.status === 'profit' && (t.profitPercent || 0) > 30) {
                     insights.push(`Consider taking profits on ${t.giftType}`);
                 }
             });
 
-            // 9. DCA opportunity
             trades.forEach(t => {
                 if (t.status === 'loss' && Math.abs(t.profitPercent || 0) > 15) {
                     insights.push(`${t.giftType} dropped significantly, DCA opportunity`);
                 }
             });
 
-            // 10. New all-time high
             const totalProfit = trades.reduce((sum, t) => sum + (t.status === 'profit' ? (t.profitAmount || 0) : -(t
                 .profitAmount || 0)), 0);
             if (totalProfit > 0) {
                 insights.push(`New all-time high! Total profit: ${totalProfit}`);
             }
 
-            // 11. Recovery mode
             const last3 = sorted.slice(0, 3);
             const recWins = last3.filter(t => t.status === 'profit').length;
             if (recWins >= 2 && lossStreak > 0) insights.push('Recovery mode activated!');
 
-            // 12. Volume alert
             if (trades.length > 20) {
                 const recent = trades.filter(t => {
                     const d = parseDate(t.createdAt);
@@ -2210,7 +2734,6 @@
                 }
             }
 
-            // Score
             let wins = 0,
                 losses = 0,
                 totalProfit2 = 0,
@@ -2231,7 +2754,7 @@
 
             let html = `
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-                        <span style="font-size:12px;color:#555;">LUMO Score</span>
+                        <span style="font-size:12px;color:#555;" data-en="LUMO Score" data-fa="امتیاز لومو">LUMO Score</span>
                         <span style="font-size:22px;font-weight:800;color:#facc15;">${score}/100</span>
                     </div>
                     <div style="height:1px;background:rgba(255,255,255,0.03);margin:6px 0;"></div>
@@ -2244,7 +2767,7 @@
                 ).join('');
             } else {
                 html +=
-                    '<div style="text-align:center;color:#444;font-size:12px;padding:8px 0;">No insights available yet</div>';
+                    '<div style="text-align:center;color:#444;font-size:12px;padding:8px 0;" data-en="No insights available yet" data-fa="هنوز تحلیلی در دسترس نیست">No insights available yet</div>';
             }
 
             container.innerHTML = html;
@@ -2278,7 +2801,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;stroke:#ef4444;">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
                             </svg>
-                            <span style="font-weight:600;font-size:12px;color:#ef4444;">Alerts</span>
+                            <span style="font-weight:600;font-size:12px;color:#ef4444;" data-en="Alerts" data-fa="هشدارها">Alerts</span>
                         </div>
                         ${alerts.map(a => `<div style="font-size:11px;color:#f5f5f5;padding:2px 0;">${a}</div>`).join('')}
                         <button onclick="document.getElementById('alerts-container').innerHTML=''" 
@@ -2381,7 +2904,7 @@
             const container = document.getElementById('time-presets-list');
             if (trades.length === 0) {
                 container.innerHTML =
-                    '<div style="text-align:center;color:#444;padding:20px 0;font-size:13px;">No trades to generate presets</div>';
+                    '<div style="text-align:center;color:#444;padding:20px 0;font-size:13px;" data-en="No trades to generate presets" data-fa="هیچ معامله‌ای برای تولید زمان‌بندی وجود ندارد">No trades to generate presets</div>';
                 openModal('modal-time-presets');
                 return;
             }
@@ -2389,7 +2912,7 @@
             const firstDate = parseDate(trades[0].createdAt);
             if (!firstDate) {
                 container.innerHTML =
-                    '<div style="text-align:center;color:#444;padding:20px 0;font-size:13px;">No valid dates</div>';
+                    '<div style="text-align:center;color:#444;padding:20px 0;font-size:13px;" data-en="No valid dates" data-fa="تاریخ معتبری وجود ندارد">No valid dates</div>';
                 openModal('modal-time-presets');
                 return;
             }
@@ -2425,13 +2948,13 @@
                         <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.03);">
                             <span style="font-weight:500;font-size:13px;">${p.label}</span>
                             <span style="font-size:11px;color:#555;">${p.start} - ${p.end}</span>
-                            <button class="btn-yellow" style="padding:3px 10px;font-size:10px;" onclick="applyTimePreset('${p.start}','${p.end}')">Apply</button>
+                            <button class="btn-yellow" style="padding:3px 10px;font-size:10px;" onclick="applyTimePreset('${p.start}','${p.end}')" data-en="Apply" data-fa="اعمال">Apply</button>
                         </div>
                     `;
             });
 
             container.innerHTML = html ||
-                '<div style="text-align:center;color:#444;padding:20px 0;font-size:13px;">No presets available</div>';
+                '<div style="text-align:center;color:#444;padding:20px 0;font-size:13px;" data-en="No presets available" data-fa="زمان‌بندی در دسترس نیست">No presets available</div>';
             openModal('modal-time-presets');
         }
 
@@ -2457,11 +2980,10 @@
 
             if (filtered.length === 0) {
                 container.innerHTML =
-                    '<div style="text-align:center;color:#444;font-size:13px;padding:40px 0;">No trades recorded</div>';
+                    '<div style="text-align:center;color:#444;font-size:13px;padding:40px 0;" data-en="No trades recorded" data-fa="هیچ معامله‌ای ثبت نشده">No trades recorded</div>';
                 return;
             }
 
-            // Sort: pinned first, then by date
             const sorted = [...filtered].sort((a, b) => {
                 if (a.pinned && !b.pinned) return -1;
                 if (!a.pinned && b.pinned) return 1;
@@ -2599,7 +3121,6 @@
             }
 
             if (editingTradeId) {
-                // Edit existing trade
                 const trade = trades.find(t => t.id === editingTradeId);
                 if (trade) {
                     trade.giftType = giftType;
@@ -2709,7 +3230,7 @@
                 const youGive = Math.round(price * 0.8);
                 const preview = document.getElementById('specify-preview');
                 preview.innerHTML = `
-                        <div>You give: ${youGive}</div>
+                        <div data-en="You give:" data-fa="شما می‌دهید:">You give: ${youGive}</div>
                         <div style="color:${profit >= 0 ? '#22c55e' : '#ef4444'};">${profit >= 0 ? '+' : '-'}${Math.abs(profit)} (${percent}%)</div>
                     `;
                 saveData();
@@ -2729,7 +3250,7 @@
                     const percent = Math.round((profit / trade.buyPrice) * 100);
                     const youGive = Math.round(trade.specifyPrice * 0.8);
                     preview.innerHTML = `
-                            <div>You give: ${youGive}</div>
+                            <div data-en="You give:" data-fa="شما می‌دهید:">You give: ${youGive}</div>
                             <div style="color:${profit >= 0 ? '#22c55e' : '#ef4444'};">${profit >= 0 ? '+' : '-'}${Math.abs(profit)} (${percent}%)</div>
                         `;
                 } else {
@@ -3063,7 +3584,7 @@
         }
 
         // ============================================================
-        // SETTINGS - UPDATED VERSION
+        // SETTINGS
         // ============================================================
         function openSettings() {
             openModal('modal-settings');
@@ -3113,7 +3634,6 @@
             URL.revokeObjectURL(url);
         }
 
-        // NEW: Backup Code with Modal
         function generateBackupCode() {
             if (trades.length === 0) {
                 alert('No data to backup');
@@ -3130,7 +3650,6 @@
             openModal('modal-backup-code');
         }
 
-        // NEW: Copy backup code
         function copyBackupCode() {
             const codeEl = document.getElementById('backup-code-display');
             const code = codeEl.textContent;
@@ -3150,31 +3669,31 @@
             });
         }
 
-        // NEW: Open import modal
         function openImportModal() {
             document.getElementById('import-code-input').value = '';
             openModal('modal-import');
         }
 
-        // NEW: Import data
         function importData() {
             const code = document.getElementById('import-code-input').value.trim();
             if (!code) {
                 alert('Please paste a backup code');
                 return;
             }
-            
+
             try {
                 const decoded = decodeBackupHash(code);
                 if (!decoded || !decoded.trades) {
                     alert('Invalid backup code. Please check and try again.');
                     return;
                 }
-                
-                if (!confirm(`This will replace all current data with imported data (${decoded.trades.length} trades). Continue?`)) {
+
+                if (!confirm(
+                        `This will replace all current data with imported data (${decoded.trades.length} trades). Continue?`
+                        )) {
                     return;
                 }
-                
+
                 trades = decoded.trades || [];
                 selectedGiftNames = decoded.selectedGifts || [];
                 if (decoded.filters) {
@@ -3182,7 +3701,7 @@
                     filterEndDate = decoded.filters.end || null;
                     currentZone = decoded.filters.zone || 'all';
                 }
-                
+
                 saveData();
                 closeModal('modal-import');
                 renderAll();
@@ -3216,8 +3735,6 @@
             a.click();
             URL.revokeObjectURL(url);
         }
-
-        // REMOVED: copyTGVer() - deleted as requested
 
         function confirmReset() {
             closeModal('modal-settings');
